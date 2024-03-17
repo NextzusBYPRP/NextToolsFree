@@ -148,13 +148,14 @@ var.set("กรุณาเลือกสิ่งที่ต้องกา�
 
 # สร้าง dictionary สำหรับเก็บตัวเลือกและ URL ที่ต้องการโหลด
 options = {
-    "ซ่อม Network": NetworkFix,
+    "ซ่อมแซม Network": NetworkFix,
     "ซ่อมแซม Power Plan": PowerPlanFix,
-    "เคลียไฟล์ Temp": CleanTemporary,
     "ซ่อมแซม Windows": RestoreHealthyourPC,
-    "แก้พับจอเกมส์แล้วค้าง จอดำ": DisablingFullscreenExclusive,
-    "Windows Service Control": WindowsServiceControl,
     "ซ่อม Windows Search Box": FixWindowsSearchBox
+    "เคลียไฟล์ Temp": CleanTemporary,
+    "แก้พับจอเกมส์แล้วค้าง จอดำ": DisablingFullscreenExclusive,
+    "Windows Service Control": WindowsServiceControl
+    
     
 }
 
