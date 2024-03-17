@@ -1,10 +1,3 @@
-from pathlib import Path
-import tkinter as tk
-import webbrowser,ctypes,os,requests,sys
-from tkinter import Tk, Canvas, Label, PhotoImage,messagebox
-from ctypes import windll
-from PIL import ImageTk,Image
-
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
