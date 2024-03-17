@@ -154,7 +154,7 @@ options = {
     "ซ่อม Windows Search Box": FixWindowsSearchBox,
     "เคลียไฟล์ Temp": CleanTemporary,
     "แก้พับจอเกมส์แล้วค้าง จอดำ": DisablingFullscreenExclusive,
-    "Windows Service Control": WindowsServiceControl
+    "Windows Service Control": WindowsServiceControl,
     
     
 }
