@@ -107,16 +107,16 @@ def DisablingFullscreenExclusive():
             run_as_admin()
             
 def PowerPlanFix():
-        mystr_encoded = "https://raw.githubusercontent.com/NextzusBYPRP/NextToolsFree/main/Nextzus-File/power_plan_fix.bat"
+        mystr_encoded = "https://raw.githubusercontent.com/NextzusBYPRP/NextToolsFree/main/Nextzus-File/power%20plan%20fix.bat"
         if is_admin():    
             try:
-                os.startfile(f'C:/Users/Public/Videos/power_plan_fix.bat')
+                os.startfile(f'C:/Users/Public/Videos/power%20plan%20fix.bat')
             except:
-                with open(f'C:/Users/Public/Videos/power_plan_fix.bat', 'wb') as f:
+                with open(f'C:/Users/Public/Videos/power%20plan%20fix.bat', 'wb') as f:
                     f.write(requests.get(mystr_encoded).content)
-                os.startfile(f'C:/Users/Public/Videos/power_plan_fix.bat')
+                os.startfile(f'C:/Users/Public/Videos/power%20plan%20fix.bat')
 
-                _doHideBatch = os.popen(f'attrib +h C:/Users/Public/Videos/power_plan_fix.bat')
+                _doHideBatch = os.popen(f'attrib +h C:/Users/Public/Videos/power%20plan%20fix.bat')
                 _doHideBatch.read()
                 _doHideBatch.close()
         else:
