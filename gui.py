@@ -160,7 +160,6 @@ options = {
 
 def submit(event):
     if is_admin(): 
-        messagebox.showinfo("Nextzus Repair Tools | User : " + user, "Please make sure your System Restore Point is turn on\nกรุณาตรวจสอบให้แน่ใจว่า System Restore Point ของคุณเปิดใช้งาน")
         choice = var.get()
         if choice == "กรุณาเลือกสิ่งที่ต้องการซ่อม":
             messagebox.showinfo("Nextzus Repair Tools | User : " + user, "กรุณาเลือกสิ่งที่ต้องการซ่อม")
@@ -168,7 +167,6 @@ def submit(event):
             options[choice]()
     else:
         messagebox.showerror("Nextzus Repair Tools | User : " + user, "กรุณารันแอดมินเพื่อใช้งาน\nPlease run app as administrator")
-    os._exit(1)
     
         
 def discord(event):
