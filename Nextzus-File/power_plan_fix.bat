@@ -13,6 +13,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\MUI\StringCacheSettings" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\MUI\StringCacheSettings" /v StringCacheGeneration /t REG_DWORD /d 0x38b /f
 echo Registry key re-established.
 
-pause
+exit
 ::Finished
 
