@@ -151,7 +151,7 @@ options = {
     "ซ่อม Network": NetworkFix,
     "ซ่อมแซม Power Plan": PowerPlanFix,
     "เคลียไฟล์ Temp": CleanTemporary,
-    "ซ่อมแซม windows": RestoreHealthyourPC,
+    "ซ่อมแซม Windows": RestoreHealthyourPC,
     "แก้พับจอเกมส์แล้วค้าง จอดำ": DisablingFullscreenExclusive,
     "Windows Service Control": WindowsServiceControl,
     "ซ่อม Windows Search Box": FixWindowsSearchBox
