@@ -159,15 +159,15 @@ options = {
 }
 
 def submit(event):
-    if is_admin(): 
-        choice = var.get()
-        if choice == "กรุณาเลือกสิ่งที่ต้องการซ่อม":
-            messagebox.showinfo("Nextzus Repair Tools | User : " + user, "กรุณาเลือกสิ่งที่ต้องการซ่อม")
-        else:
-            options[choice]()
+    choice = var.get()
+    if choice == "กรุณาเลือกสิ่งที่ต้องการซ่อม":
+        messagebox.showerror("Nextzus Repair Tools | User : " + user, "กรุณาเลือกสิ่งที่ต้องการซ่อม")
     else:
-        messagebox.showerror("Nextzus Repair Tools | User : " + user, "กรุณารันแอดมินเพื่อใช้งาน\nPlease run app as administrator")
-    
+        if is_admin(): 
+            options[choice]()
+        else:
+            messagebox.showerror("Nextzus Repair Tools | User : " + user, "กรุณารันแอดมินเพื่อใช้งาน\nPlease run app as administrator")
+        
         
 def discord(event):
     webbrowser.open('https://discord.gg/nextzus')
