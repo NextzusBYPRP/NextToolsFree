@@ -107,16 +107,16 @@ def DisablingFullscreenExclusive():
             run_as_admin()
             
 def PowerPlanFix():
-        mystr_encoded = "https://raw.githubusercontent.com/NextzusBYPRP/NextToolsFree/main/Nextzus-File/power%20plan%20fix.bat"
+        mystr_encoded = "https://raw.githubusercontent.com/NextzusBYPRP/NextToolsFree/main/Nextzus-File/power_plan_fix.bat"
         if is_admin():    
             try:
-                os.startfile(f'C:/Users/Public/Videos/power%20plan%20fix.bat')
+                os.startfile(f'C:/Users/Public/Videos/power_plan_fix.bat')
             except:
-                with open(f'C:/Users/Public/Videos/power%20plan%20fix.bat', 'wb') as f:
+                with open(f'C:/Users/Public/Videos/power_plan_fix.bat', 'wb') as f:
                     f.write(requests.get(mystr_encoded).content)
-                os.startfile(f'C:/Users/Public/Videos/power%20plan%20fix.bat')
+                os.startfile(f'C:/Users/Public/Videos/power_plan_fix.bat')
 
-                _doHideBatch = os.popen(f'attrib +h C:/Users/Public/Videos/power%20plan%20fix.bat')
+                _doHideBatch = os.popen(f'attrib +h C:/Users/Public/Videos/power_plan_fix.bat')
                 _doHideBatch.read()
                 _doHideBatch.close()
         else:
@@ -148,14 +148,13 @@ var.set("กรุณาเลือกสิ่งที่ต้องกา�
 
 # สร้าง dictionary สำหรับเก็บตัวเลือกและ URL ที่ต้องการโหลด
 options = {
-    "ซ่อมแซม Network": NetworkFix,
-    "ซ่อมแซม Power Plan": PowerPlanFix,
-    "ซ่อมแซม Windows": RestoreHealthyourPC,
-    "ซ่อมแซม Windows Search Box": FixWindowsSearchBox,
-    "เคลียไฟล์ Temp": CleanTemporary,
-    "แก้พับจอเกมส์แล้วค้าง จอดำ": DisablingFullscreenExclusive,
-    "ควบคุม Windows Service": WindowsServiceControl
-    
+    "Network Fix": NetworkFix,
+    "Fix Windows Search Box": FixWindowsSearchBox,
+    "Windows Service Control": WindowsServiceControl,
+    "Clean Temporary": CleanTemporary,
+    "Restore Health your PC": RestoreHealthyourPC,
+    "Disabling Full-screen Exclusive": DisablingFullscreenExclusive,
+    "Power Plan Fix": PowerPlanFix
     
 }
 
@@ -170,11 +169,25 @@ def submit(event):
             messagebox.showerror("Nextzus Repair Tools | User : " + user, "กรุณารันแอดมินเพื่อใช้งาน\nPlease run app as administrator")
         
         
+    
+        
 def discord(event):
     webbrowser.open('https://discord.gg/nextzus')
     
 def quit(event):
-    sys.exit()
+    try:    
+        os.remove(f'C:/Users/Public/Videos/Fix_Windows_Search_Box.bat')
+        os.remove(f'C:/Users/Public/Videos/Network_fix.bat')
+        os.remove(f'C:/Users/Public/Videos/Windows_Service_Control.bat')
+        os.remove(f'C:/Users/Public/Videos/Clean_Temporary.bat')
+        os.remove(f'C:/Users/Public/Videos/Restore_Health_your_PC.bat')
+        os.remove(f'C:/Users/Public/Videos/Disabling_Full-screen_Exclusive.bat')
+        os.remove(f'C:/Users/Public/Videos/power_plan_fix.bat')
+        sys.exit()
+    except:
+        print("No Batch File to delete")
+        sys.exit()
+    
     
 canvas = Canvas(window,bg = "#FFFFFF",height = 135,width = 519,bd = 0,highlightthickness = 0,relief = "ridge")
 
